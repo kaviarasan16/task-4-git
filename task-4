@@ -1,0 +1,56 @@
+1.Establish a new directory, populate it with script files
+
+ubuntu@ip-172-31-39-66:~$ mkdir test
+ubuntu@ip-172-31-39-66:~$ cd test/
+ubuntu@ip-172-31-39-66:~/test$ touch code
+
+
+2.initiate an empty repository on GitHub
+
+login to github account --> Home page --> New --> Repository name --> create.
+
+3.convert the local directory into a Git repository, and link it to GitHub for pushing the code into the repository.
+
+git init command will initialize local directory to git
+
+ubuntu@ip-172-31-39-66:~/test$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+ubuntu@ip-172-31-39-66:~/test$ git remote
+ubuntu@ip-172-31-39-66:~/test$ git remote add origin https://github.com/kaviarasan16/test.git
+ubuntu@ip-172-31-39-66:~/test$ git remote
+origin
+ubuntu@ip-172-31-39-66:~/test$ git remote -v
+origin  https://github.com/kaviarasan16/test.git (fetch)
+origin  https://github.com/kaviarasan16/test.git (push)
+ubuntu@ip-172-31-39-66:~/test$ ls
+ubuntu@ip-172-31-39-66:~/test$ touch code
+ubuntu@ip-172-31-39-66:~/test$ git add code
+ubuntu@ip-172-31-39-66:~/test$ git config --global user.name "kaviarasan16"
+ubuntu@ip-172-31-39-66:~/test$ git config --global user.email "kaviarasan1693@gmail.com"
+ubuntu@ip-172-31-39-66:~/test$
+ubuntu@ip-172-31-39-66:~/test$
+ubuntu@ip-172-31-39-66:~/test$ git commit -m "my first code commit"
+[master (root-commit) 13ce7d1] my first code commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 code
+ubuntu@ip-172-31-39-66:~/test$
+
+
+ubuntu@ip-172-31-39-66:~/test$ git branch -M main
+
+ubuntu@ip-172-31-39-66:~/test$ git push -u origin main
+Username for 'https://github.com': kaviarasan16
+Password for 'https://kaviarasan16@github.com':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 209 bytes | 209.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/kaviarasan16/test.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+
